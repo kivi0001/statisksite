@@ -1,0 +1,44 @@
+body{
+    max-width: 1400px;
+    margin: auto;
+    background-color: #F2E3E3;
+}
+
+header img{
+    width: 8%;
+    height: auto;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menupunkter{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menupunkter a{
+    text-decoration: none;
+    background-color: #A94747;
+    color: white;
+    margin: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.menupunkter a:hover{
+    color: #540E0E;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 42px;
+    margin-left: 5%;
+    margin-top: 8rem;
+}
