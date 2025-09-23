@@ -8,3 +8,12 @@ if(tid < 5) {
     console.log("Goddag");
 } else {console.log("Godaften");
 }
+
+let point = 0;
+document.querySelector("#hej").addEventListener('click', count);
+function count(){
+    console.log("point");
+    point ++;
+    console.log(`h1 er nu ${point}`);
+    document.querySelector("#h1").textContent = point;
+}
