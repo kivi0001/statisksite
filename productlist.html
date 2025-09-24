@@ -3,20 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/productlist.css" />
     <title>Statisk Site</title>
   </head>
   <body>
     <header>
-      <img class="logo" src="" alt="" />
       <nav class="menu">
+        <img class="logo" src="assets/newpug-kopi.svg" alt="placeholder logo" />
         <ul class="menupunkter">
-          <li>Categories</li>
-          <li>Brands</li>
-          <li>Seasons</li>
+          <a href="index.html">Categories</a>
+          <a href="productlist.html">Brands</a>
+          <a href="productlist.html">Seasons</a>
         </ul>
       </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <h1>Products</h1>
+      <section class="productlist-container">
+        <div class="standard-card">
+          <img src="" alt="" />
+          <h2 class="product-title"></h2>
+          <p class="type-and-brand"></p>
+          <p class="price"></p>
+          <a href="product.html" class="product-link">Read More</a>
+        </div>
+
+        <div class="discount-card">
+          <img src="" alt="" />
+          <h2 class="product-title"></h2>
+          <p class="type-and-brand"></p>
+          <p class="previous-price"></p>
+          <div class="price-and-percentage">
+            <p class="price"></p>
+            <p class="percentage"></p>
+          </div>
+          <a href="product.html" class="product-link">Read More</a>
+        </div>
+
+        <div class="soldout-card">
+          <div class="image-and-soldout">
+            <p class="soldout">Sold Out</p>
+            <img src="" alt="" />
+          </div>
+          <h2 class="product-title"></h2>
+          <p class="type-and-brand"></p>
+          <p class="price"></p>
+          <a href="product.html" class="product-link">Read More</a>
+        </div>
+
+        <div class="discount-soldout-card">
+          <div class="image-and-soldout">
+            <p class="soldout">Sold Out</p>
+            <img src="" alt="" />
+          </div>
+          <h2 class="product-title"></h2>
+          <p class="type-and-brand"></p>
+          <p class="previous-price"></p>
+          <div class="price-and-percentage">
+            <p class="price"></p>
+            <p class="percentage"></p>
+          </div>
+          <a href="product.html" class="product-link">Read More</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav class="footer-menu">
+        <ul class="footer-menupunkter">
+          <a href="index.html">Categories</a>
+          <a href="productlist.html">Brands</a>
+          <a href="productlist.html">Seasons</a>
+        </ul>
+      </nav>
+      <section class="news-and-contact">
+        <div class="newsletter">
+          <h2>Newsletter</h2>
+          <p>
+            Sign up to our newsletter <br />
+            and stay up to date with the latest fashion trends.
+          </p>
+          <input type="text" class="email-input" />
+        </div>
+        <div class="contact">
+          <h3>contact@fashionrus.com</h3>
+          <h3>+45 88 88 88 44</h3>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

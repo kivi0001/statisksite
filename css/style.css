@@ -4,8 +4,13 @@ body{
     background-color: #F2E3E3;
 }
 
+header{
+    border-bottom: 1px solid black;
+    padding: 2em 1em 2em 1em;
+}
+
 header img{
-    width: 8%;
+    max-width: 150px;
     height: auto;
 }
 
@@ -18,6 +23,7 @@ header img{
 .menupunkter{
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .menupunkter a{
@@ -38,7 +44,72 @@ header img{
 
 h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 42px;
+    font-size: 52px;
     margin-left: 5%;
     margin-top: 8rem;
+}
+
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 38px;
+    letter-spacing: 3px;
+    color: #F2E3E3;
+    margin-bottom: 0;
+}
+
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    margin: 0;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-top: 10em;
+    padding: 2em 1em 2em 1em;
+    background-color: #A94747;
+}
+
+.footer-menupunkter{
+    display: grid;
+}
+
+.footer-menupunkter a{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+    line-height: 70px;
+    text-decoration-line: none;
+}
+
+.footer-menupunkter a:hover{
+    text-decoration-line: underline;
+    color: #540E0E;
+}
+
+.newsletter{
+    margin-left: 50%;
+    margin-bottom: 2em;
+}
+
+.newsletter p{
+    margin-top: 0.5em;
+    color: #F2E3E3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+input{
+    width: 90%;
+    height: 24px;
+    border: 2px solid #540E0E;
+    border-radius: 10px;
+}
+
+.contact{
+    padding-right: 2em;
+    text-align: end;
 }

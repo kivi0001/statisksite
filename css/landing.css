@@ -1,6 +1,6 @@
 .category_list_container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    Grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .category_list_container a{
@@ -11,4 +11,10 @@
     margin: 1em;
     padding: 3rem 0rem 3rem 2rem;
     color: white;
+    border: 2px solid #C98C8C;
+}
+
+.category_list_container a:hover{
+    color:  #540E0E;
+    border: 2px solid #540E0E;
 }
