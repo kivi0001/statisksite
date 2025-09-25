@@ -3,20 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
     <title>Statisk Site</title>
   </head>
   <body>
     <header>
-      <img class="logo" src="" alt="" />
       <nav class="menu">
+        <img class="logo" src="assets/newpug-kopi.svg" alt="placeholder logo" />
         <ul class="menupunkter">
-          <li>Categories</li>
-          <li>Brands</li>
-          <li>Seasons</li>
+          <a href="index.html">Categories</a>
+          <a href="productlist.html">Brands</a>
+          <a href="productlist.html">Seasons</a>
         </ul>
       </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <h1>*Product Name*</h1>
+      <section class="product-section">
+        <div class="product-img">
+          <img src="assets/1573pants.webp" alt="pants" />
+        </div>
+        <div class="product-info">
+          <h2>Product information</h2>
+          <h3>Model</h3>
+          <p class="model">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <h3>Color</h3>
+          <p class="color">Black</p>
+          <h3>Price</h3>
+          <p class="price">DKK 699,-</p>
+          <p class="discount">Now DKK 399,-</p>
+        </div>
+        <div class="buy-now">
+          <h2>Choose your size</h2>
+          <h3>Model</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="choose-and-add">
+            <label for="sizes">Sizes available</label>
+            <select name="sizes" id="sizes">
+              <option value="xs">XS</option>
+              <option value="s">S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+            </select>
+            <button>
+              <a href=""> Add to basket </a>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav class="footer-menu">
+        <ul class="footer-menupunkter">
+          <a href="index.html">Categories</a>
+          <a href="productlist.html">Brands</a>
+          <a href="productlist.html">Seasons</a>
+        </ul>
+      </nav>
+      <section class="news-and-contact">
+        <div class="newsletter">
+          <h2>Newsletter</h2>
+          <p>
+            Sign up to our newsletter <br />
+            and stay up to date with the latest fashion trends.
+          </p>
+          <input type="text" class="email-input" />
+        </div>
+        <div class="contact">
+          <h3>contact@fashionrus.com</h3>
+          <h3>+45 88 88 88 44</h3>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

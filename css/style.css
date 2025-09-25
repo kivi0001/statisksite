@@ -63,6 +63,10 @@ h3{
     margin: 0;
 }
 
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 footer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
