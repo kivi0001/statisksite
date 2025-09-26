@@ -8,17 +8,25 @@
     width: 100%;
 }
 
-.image-and-soldout{
+.card{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.image-and-soldout img{
+.card img{
     grid-column: 1 / 4;
     grid-row: 1 / 3;
 }
 
-.soldout{
+.not-soldout{
+    display: none;
+}
+
+.no-discount{
+    display: none;
+}
+
+.SoldOut{
     grid-row: 1;
     grid-column: 1;
     background-color: #A94747;
@@ -30,6 +38,7 @@
     text-decoration-line: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 1px;
+    display: block;
 }
 
 
@@ -53,9 +62,12 @@ h2{
     letter-spacing: 1px;
 }
 
+
+
 .price-and-percentage{
     display: flex;
     justify-content: space-between;
+    display: block;
 }
 
 .percentage{
@@ -64,6 +76,7 @@ h2{
     color: white;
     font-weight: bold;
 }
+
  .price{
     padding: 0.5em 0em 0.5em 0em;
  }
