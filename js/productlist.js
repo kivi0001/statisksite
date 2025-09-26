@@ -12,8 +12,8 @@ function showProducts(data) {
     data.forEach(products => {
    
 
-markup += `<div class="discount-soldout-card">
-<div class="card ${products.discount && "OnSale"} ${products.soldout && "SoldOut"}">
+markup += `<div class="standard-card">
+<div class="image-div ${products.discount && "OnSale"} ${products.soldout && "SoldOut"}">
             <img
               class="soldout-image"
               src="https://kea-alt-del.dk/t7/images/webp/640/${products.id}.webp"
@@ -25,7 +25,7 @@ markup += `<div class="discount-soldout-card">
           <p class="type-and-brand">${products.articletype}</p>
           <p class="price">DKK ${products.price},-</p>
           <div class="no-discount ${products.discount && "price-and-percentage"}">
-            <p class="now-price">Now DKK ${Math.round(products.price - products.price * products.discount / 100)},-</p>
+            <p class="now-price">Now: DKK ${Math.round(products.price - products.price * products.discount / 100)},-</p>
             <p class="percentage">${products.discount}%</p>
           </div>
           <a href="product.html?id=${products.id}" class="product-link">Read More</a>
