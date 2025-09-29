@@ -1,8 +1,15 @@
 const productListSection = document.querySelector(".productlist-container");
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
+const header = (document.querySelector(".overskrift").textContent = category);
+
+console.log(category);
+
 
 console.log(productListSection);
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=45`)
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=45&category=${category}`)
 .then((res) => res.json())
 .then(showProducts);
 
