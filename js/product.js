@@ -1,4 +1,4 @@
-const productSection = document.querySelector(".product-section");
+const productSection = document.querySelector("main");
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
@@ -9,7 +9,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
 .then((product) => {
 
 productSection.innerHTML = `
-
+<div class="product-name"><h1>${product.productdisplayname}</h1>
+</div>
+<section class="product-section">
         <div class="product-img">
           <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="produktbillede class="product-image" />
         </div>
@@ -43,7 +45,7 @@ productSection.innerHTML = `
             </button>
           </div>
         </div>
-
+        </section>
 `;
 
 });

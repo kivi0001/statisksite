@@ -17,12 +17,20 @@
    border-bottom-right-radius: 25px;
 }
 
+.image-div{
+    position: relative;
+}
+
 .image-div img{
     width: 100%;
 }
 
 .soldout-image{
     grid-row: 1;
+}
+
+.img-soldout{
+    opacity: 50%;
 }
 
 .not-soldout{
@@ -33,15 +41,20 @@
     display: none;
 }
 
+.scratch-price{
+    text-decoration-line: line-through;
+}
+
 .SoldOut{
-    grid-row: 1;
-    background-color: #A94747;
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  font-weight: bold;
     text-align: center;
-    opacity: 60%;
-    color: white;
     text-decoration-line: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 28px;
     letter-spacing: 1px;
     display: block;
 }
@@ -72,6 +85,10 @@ h2{
     padding-left: 2em;
 }
 
+.price{
+    font-size: 22px;
+}
+
 .type-and-brand{
     color: #540E0E;
     opacity: 45%;
@@ -97,5 +114,6 @@ h2{
 
 .now-price{
     font-size: 22px;
+    font-weight: bold;
     margin-left: 1em;
 }
