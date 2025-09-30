@@ -13,7 +13,11 @@ productSection.innerHTML = `
 </div>
 <section class="product-section">
         <div class="product-img">
-          <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="produktbillede class="product-image" />
+          <img 
+          class="soldout-image ${product.soldout && "img-soldout"}"
+              src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
+              alt="pants" />
+              <div class="not-soldout ${product.soldout && "SoldOut"}">Sold Out</div>
         </div>
         <div class="product-info">
           <h2>Product information</h2>
@@ -24,8 +28,11 @@ productSection.innerHTML = `
           <h3>Description</h3>
           <p>${product.description}</p>
           <h3>Price</h3>
-          <p class="price">DKK ${product.price},-</p>
-          <p class="discount">Discount: ${product.discount}%</p>
+          <p class="price ${product.discount && "scratch-price"}">DKK ${product.price},-</p>
+          <div class="no-discount ${product.discount && "price-and-percentage"}">
+            <p class="now-price">Now: DKK ${Math.round(product.price - product.price * product.discount / 100)},-</p>
+            <p class="percentage">${product.discount}%</p>
+          </div>
         </div>
         <div class="buy-now">
           <h2>Choose your size</h2>
