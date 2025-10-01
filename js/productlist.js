@@ -4,22 +4,37 @@ const category = params.get("category");
 
 const header = (document.querySelector(".overskrift").textContent = category);
 
-console.log(category);
+document.querySelectorAll("#filter-knapper button").forEach(knap => knap.addEventListener("click", showFiltered));
 
+function showFiltered(){
+    console.log(this.dataset.gender);
+    const gender = this.dataset.gender;
+    if(gender =="All"){
+        showProducts(allData);
+    }
+    else{
+        const udsnit = allData.filter(product => product.gender == gender);
+        showProducts(udsnit);
+    }
+}
 
-console.log(productListSection);
+let allData;
 
 fetch(`https://kea-alt-del.dk/t7/api/products?limit=45&category=${category}`)
 .then((res) => res.json())
-.then(showProducts);
+.then((data) => {
+    allData = data;
+    showProducts(allData);
+});
+
+
 
 function showProducts(data) {
-    console.log(data)
-    let markup = "";
+    productListSection.innerHTML = "";
     data.forEach(products => {
    
 
-markup += `<div class="standard-card">
+productListSection.innerHTML += `<div class="standard-card">
 <div class="image-div">
             <img
               class="soldout-image ${products.soldout && "img-soldout"}"
@@ -38,6 +53,5 @@ markup += `<div class="standard-card">
           <a href="product.html?id=${products.id}" class="product-link">Read More</a>
           </div>` 
         });
-productListSection.innerHTML += markup;
 
 }
