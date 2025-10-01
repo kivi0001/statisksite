@@ -42,11 +42,46 @@ header img{
     color: #540E0E;
 }
 
+.breadcrumb{
+    padding: 1em;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: end;
+  }
+
+  .breadcrumb li{
+    margin: 0.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+  }
+
+  .breadcrumb li:not(:last-child)::after {
+    margin: 0 0.25rem;
+    content: "→";
+    color: #540E0E;
+  }
+
+  .breadcrumb a{
+    color: black;
+    text-decoration-line: none;
+  }
+
+  .breadcrumb a:hover{
+    color: #A94747;
+  }
+
 h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 52px;
     margin-left: 5%;
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 
 h2{

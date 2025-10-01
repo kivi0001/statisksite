@@ -1,4 +1,4 @@
-const productSection = document.querySelector("main");
+const productSection = document.querySelector(".produkt-sektion");
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 

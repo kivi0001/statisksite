@@ -1,3 +1,15 @@
+.fashion-logo-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.fashion-logo{
+    width: 100%;
+    height: auto;
+    
+}
+
 .category_list_container{
     display: grid;
     Grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

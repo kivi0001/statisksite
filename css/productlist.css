@@ -1,3 +1,27 @@
+#filter-knapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em;
+}
+
+.filter{
+    padding: 1em;
+    margin: 1em;
+    width: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #540E0E;
+    border: none;
+    border-radius: 20px;
+}
+
+.filter:hover{
+    background-color: #A94747;
+    cursor: pointer;
+}
+
 .productlist-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
