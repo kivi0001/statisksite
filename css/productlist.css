@@ -17,9 +17,53 @@
     border-radius: 20px;
 }
 
-.filter:hover{
+.sort {
+    padding: 1em;
+    margin: 1em;
+    width: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: white;
     background-color: #A94747;
+    border: none;
+    border-radius: 20px;
+}
+
+.sortering{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0em 0.5em 0em 2em;
+}
+
+.filter:hover{
+    background-color: white;
     cursor: pointer;
+    color: black;
+}
+
+.sort:hover {
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+.slider{
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    margin-top: 3em;
+    width: 30%;
+    margin-right: 4em;
+}
+
+#my-range{
+    background-color: black;
+}
+
+.filter-og-range{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .productlist-container{

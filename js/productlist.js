@@ -5,25 +5,39 @@ const category = params.get("category");
 const header = (document.querySelector(".overskrift").textContent = category);
 
 document.querySelectorAll("#filter-knapper button").forEach(knap => knap.addEventListener("click", showFiltered));
+document.querySelector(".sortering"),addEventListener("click", showSorted);
 
-function showFiltered(){
-    console.log(this.dataset.gender);
-    const gender = this.dataset.gender;
+function showSorted(event){
+    const direction = event.target.dataset.direction;
+    if(direction == "lohi"){
+        currentDataSet.sort((a, b) => a.price - b.price);
+        console.log(allData);
+    }else{
+        currentDataSet.sort((a, b) => b.price - a.price);
+    }
+    showProducts(currentDataSet);
+}
+
+
+function showFiltered(event){
+    console.log(event.target.dataset.gender);
+    const gender = event.target.dataset.gender;
     if(gender =="All"){
-        showProducts(allData);
+        currentData = allData;
     }
     else{
         const udsnit = allData.filter(product => product.gender == gender);
-        showProducts(udsnit);
+        currentData = udsnit;
     }
+    showProducts(currentDataSet);
 }
 
-let allData;
+let allData, currentDataSet;
 
 fetch(`https://kea-alt-del.dk/t7/api/products?limit=45&category=${category}`)
 .then((res) => res.json())
 .then((data) => {
-    allData = data;
+    allData = currentDataSet = data;
     showProducts(allData);
 });
 
@@ -54,4 +68,19 @@ productListSection.innerHTML += `<div class="standard-card">
           </div>` 
         });
 
+}
+
+const myRange = document.querySelector("#my-range");
+const maxPrice = document.querySelector("#max");
+const minPrice = document.querySelector("#min");
+
+myRange.addEventListener("input", () => maxPrice.textContent = event.target.value);
+myRange.addEventListener("change", showFiltered);
+
+function highestPrice(arr){
+    arr.sort((a, b) => a.price - b.price);
+    myRange.max = highest;
+    maxDisp.textContent = highest;
+    myRange.min = arr[0],price;
+    minDisp.textContent = arr[0].price;
 }
